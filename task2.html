@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 2 — Registration for AITU Hack 2026</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/task2.css">
+</head>
+<body class="py-4 py-md-5">
+
+  <main class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+
+        <div class="card hack-card">
+          <div class="hack-header p-4">
+            <h1 class="h3 fw-bold mb-1">Registration for AITU Hack 2026</h1>
+            <p class="mb-0 opacity-75 small">Student Hackathon Registration Form &bull; Fields marked with * are required</p>
+          </div>
+
+          <div class="card-body p-4">
+            <form action="#" method="get">
+
+              <div class="row g-3">
+                <!-- 1. Full name * (2–40 characters) -->
+                <div class="col-12 col-md-6">
+                  <label for="fullName" class="form-label">Full name <span class="required-star">*</span></label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="fullName"
+                    name="fullName"
+                    placeholder="Anna-Maria Lee"
+                    minlength="2"
+                    maxlength="40"
+                    required>
+                  <div class="invalid-feedback">Please enter your full name (2 to 40 characters).</div>
+                </div>
+
+                <!-- 2. University email -->
+                <div class="col-12 col-md-6">
+                  <label for="uniEmail" class="form-label">University email <span class="required-star">*</span></label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="uniEmail"
+                    name="uniEmail"
+                    placeholder="a.fedenko@astanait.edu.kz"
+                    required>
+                  <div class="invalid-feedback">Please enter a valid email address (e.g., name@astanait.edu.kz).</div>
+                </div>
+
+                <!-- 3. Age -->
+                <div class="col-12 col-md-4">
+                  <label for="age" class="form-label">Age <span class="required-star">*</span></label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="age"
+                    name="age"
+                    placeholder="18"
+                    min="16"
+                    max="30"
+                    step="1"
+                    required>
+                  <div class="invalid-feedback">Age must be a whole number from 16 to 30.</div>
+                </div>
+
+                <!-- 4. Team size -->
+                <div class="col-12 col-md-4">
+                  <label for="teamSize" class="form-label">Team size <span class="required-star">*</span></label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="teamSize"
+                    name="teamSize"
+                    placeholder="4"
+                    min="1"
+                    max="4"
+                    step="1"
+                    required>
+                  <div class="invalid-feedback">Team size must be a whole number from 1 to 4.</div>
+                </div>
+
+                <!-- 5. Track  -->
+                <div class="col-12 col-md-4">
+                  <label for="track" class="form-label">Track <span class="required-star">*</span></label>
+                  <select class="form-select" id="track" name="track" required>
+                    <option value="" selected>Choose...</option>
+                    <option value="Web">Web</option>
+                    <option value="Mobile">Mobile</option>
+                    <option value="AI">AI</option>
+                    <option value="GameDev">GameDev</option>
+                  </select>
+                  <div class="invalid-feedback">Please select a track (Web, Mobile, AI, or GameDev).</div>
+                </div>
+
+                <!-- 6. Arrival day -->
+                <div class="col-12 col-md-4">
+                  <label for="arrivalDay" class="form-label">Arrival day <span class="required-star">*</span></label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="arrivalDay"
+                    name="arrivalDay"
+                    min="2026-11-20"
+                    max="2026-11-22"
+                    step="1"
+                    required>
+                  <div class="invalid-feedback">Arrival day must be between 20.11.2026 and 22.11.2026.</div>
+                </div>
+
+                <!-- 7. Check-in time -->
+                <div class="col-12 col-md-4">
+                  <label for="checkInTime" class="form-label">Check-in time <span class="required-star">*</span></label>
+                  <input
+                    type="time"
+                    class="form-control"
+                    id="checkInTime"
+                    name="checkInTime"
+                    min="09:00"
+                    max="18:00"
+                    step="1800"
+                    required>
+                  <div class="invalid-feedback">Check-in time must be 09:00–18:00 in 30-minute intervals (e.g., 10:00, 10:30).</div>
+                </div>
+
+                <!-- 8. Entry fee * (0–5000 ₸, in steps of 500 ₸) -->
+                <div class="col-12 col-md-4">
+                  <label for="entryFee" class="form-label">Entry fee (₸) <span class="required-star">*</span></label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="entryFee"
+                    name="entryFee"
+                    placeholder="1500"
+                    min="0"
+                    max="5000"
+                    step="500"
+                    required>
+                  <div class="invalid-feedback">Entry fee must be between 0 ₸ and 5000 ₸ in steps of 500 ₸.</div>
+                </div>
+
+                <!-- 9. Experience level -->
+                <div class="col-12">
+                  <fieldset>
+                    <legend class="col-form-label pt-0 mb-1">Experience level <span class="required-star">*</span></legend>
+                    <div class="d-flex flex-wrap gap-3">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="experience" id="expBeginner" value="Beginner" required>
+                        <label class="form-check-label" for="expBeginner">Beginner</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="experience" id="expIntermediate" value="Intermediate" required>
+                        <label class="form-check-label" for="expIntermediate">Intermediate</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="experience" id="expAdvanced" value="Advanced" required>
+                        <label class="form-check-label" for="expAdvanced">Advanced</label>
+                      </div>
+                    </div>
+                    <div class="invalid-feedback">Please choose your experience level.</div>
+                  </fieldset>
+                </div>
+
+                <!-- 10. GitHub profile -->
+                <div class="col-12 col-md-6">
+                  <label for="githubProfile" class="form-label">GitHub profile <span class="text-muted fw-normal">(optional)</span></label>
+                  <input
+                    type="url"
+                    class="form-control"
+                    id="githubProfile"
+                    name="githubProfile"
+                    placeholder="https://github.com/yerassyl-dev">
+                  <div class="invalid-feedback">Please enter a full URL starting with https:// or http:// (or leave empty).</div>
+                </div>
+
+                <!-- 11. Password -->
+                <div class="col-12 col-md-6">
+                  <label for="password" class="form-label">Password <span class="required-star">*</span></label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    name="password"
+                    placeholder="8–20 characters"
+                    minlength="8"
+                    maxlength="20"
+                    required>
+                  <div class="invalid-feedback">Password must be between 8 and 20 characters long.</div>
+                </div>
+
+                <!-- 12. Motivation-->
+                <div class="col-12">
+                  <label for="motivation" class="form-label">Motivation <span class="required-star">*</span></label>
+                  <textarea
+                    class="form-control"
+                    id="motivation"
+                    name="motivation"
+                    rows="3"
+                    placeholder="Tell us why you want to participate in AITU Hack 2026 (50–300 characters)..."
+                    minlength="50"
+                    maxlength="300"
+                    required></textarea>
+                  <div class="invalid-feedback">Motivation must be between 50 and 300 characters long.</div>
+                </div>
+
+                <!-- 13. Rules agreement -->
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="rulesAgreement" name="rulesAgreement" required>
+                    <label class="form-check-label" for="rulesAgreement">
+                      I agree with the AITU Hack 2026 rules and code of conduct <span class="required-star">*</span>
+                    </label>
+                    <div class="invalid-feedback">You must agree to the hackathon rules before registering.</div>
+                  </div>
+                </div>
+
+                <!-- Submit & Reset buttons -->
+                <div class="col-12 d-flex justify-content-end gap-2 mt-4">
+                  <button type="reset" class="btn btn-outline-secondary px-4">Reset</button>
+                  <button type="submit" class="btn btn-primary px-4 fw-semibold">Register for AITU Hack 2026</button>
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
