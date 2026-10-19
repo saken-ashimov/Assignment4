@@ -1,0 +1,87 @@
+/* Task 2 — Registration for AITU Hack 2026 (Native HTML Validation + :user-invalid / :user-valid) */
+
+body {
+  background-color: #f3f6fb;
+  color: #1e293b;
+}
+
+.hack-card {
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.75rem rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+}
+
+.hack-header {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  color: #ffffff;
+}
+
+.form-label,
+.col-form-label {
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.required-star {
+  color: #dc3545;
+}
+
+/* Validation States */
+.form-control:user-invalid,
+.form-select:user-invalid {
+  border-color: #dc3545;
+  background-color: #fff8f8;
+}
+
+.form-control:user-invalid:focus,
+.form-select:user-invalid:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+.form-control:user-valid,
+.form-select:user-valid {
+  border-color: #198754;
+}
+
+.form-control:user-valid:focus,
+.form-select:user-valid:focus {
+  border-color: #198754;
+  box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+}
+
+.form-check-input:user-invalid {
+  border-color: #dc3545;
+}
+
+.form-check-input:user-invalid ~ .form-check-label {
+  color: #dc3545;
+}
+
+.form-check-input:user-valid {
+  border-color: #198754;
+}
+
+.form-check-input:checked:user-valid {
+  background-color: #198754;
+  border-color: #198754;
+}
+
+/* Feedback Messages */
+input:user-invalid ~ .invalid-feedback,
+select:user-invalid ~ .invalid-feedback,
+textarea:user-invalid ~ .invalid-feedback,
+.input-group:has(input:user-invalid) ~ .invalid-feedback,
+fieldset:has(input:user-invalid) .invalid-feedback {
+  display: block;
+}
+
+/* Valid Feedback Messages */
+input:user-valid ~ .valid-feedback,
+select:user-valid ~ .valid-feedback,
+textarea:user-valid ~ .valid-feedback,
+.input-group:has(input:user-valid) ~ .valid-feedback,
+fieldset:has(input:user-valid) .valid-feedback {
+  display: block;
+}

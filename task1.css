@@ -1,0 +1,153 @@
+/* Task 1 Custom Styles on top of Bootstrap 5.3 */
+/* Palette: #0F6B5F, #F2A93B, #16302B, #F4F7F5, #E6EFEC */
+
+:root {
+  --brand-teal: #0F6B5F;
+  --brand-amber: #F2A93B;
+  --brand-dark: #16302B;
+  --brand-light: #F4F7F5;
+  --brand-bg: #E6EFEC;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--brand-bg);
+  color: var(--brand-dark);
+}
+
+/* Ticket Card */
+.ticket-card {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 1.25rem;
+  box-shadow: 0 0.75rem 2rem rgba(22, 48, 43, 0.1);
+  overflow: hidden;
+}
+
+.ticket-card-header {
+  background-color: var(--brand-teal);
+  color: #ffffff;
+}
+
+/* One way / Round trip radio toggle pill */
+.trip-toggle-group {
+  border: 1px solid #b8ccc6;
+  background-color: #ffffff;
+  padding: 0.15rem;
+}
+
+.trip-toggle-group .btn {
+  color: var(--brand-dark);
+  font-weight: 500;
+  font-size: 0.9rem;
+  border: none;
+}
+
+.trip-toggle-group .btn-check:checked + .btn {
+  background-color: var(--brand-teal);
+  color: #ffffff;
+}
+
+.trip-toggle-group .btn-check:focus-visible + .btn {
+  outline: 2px solid var(--brand-amber);
+  outline-offset: 2px;
+}
+
+/* Floating inputs (From / To) */
+.form-floating > .form-control {
+  background-color: var(--brand-light);
+  border-color: var(--brand-bg);
+  color: var(--brand-dark);
+  font-weight: 500;
+  border-radius: 0.65rem;
+}
+
+.form-floating > label {
+  color: #5c756e;
+}
+
+/* Standard inputs and selects */
+.form-label,
+.col-form-label {
+  color: var(--brand-dark);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.form-control,
+.form-select {
+  border-color: #cfe0db;
+  color: var(--brand-dark);
+  border-radius: 0.65rem;
+  padding-top: 0.55rem;
+  padding-bottom: 0.55rem;
+}
+
+.form-control::placeholder {
+  color: #8fa39d;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--brand-teal);
+  box-shadow: 0 0 0 0.2rem rgba(15, 107, 95, 0.2);
+}
+
+/* Phone input group */
+.phone-prefix {
+  background-color: var(--brand-teal);
+  color: #ffffff;
+  font-weight: 600;
+  border-color: var(--brand-teal);
+  border-top-left-radius: 0.65rem;
+  border-bottom-left-radius: 0.65rem;
+}
+
+/* Radio buttons, Switches, Checkboxes */
+.form-check-input {
+  border-color: #9ab3ac;
+}
+
+.form-check-input:checked {
+  background-color: var(--brand-teal);
+  border-color: var(--brand-teal);
+}
+
+.form-check-input:focus {
+  border-color: var(--brand-teal);
+  box-shadow: 0 0 0 0.2rem rgba(15, 107, 95, 0.25);
+}
+
+.form-check-label {
+  color: var(--brand-dark);
+  font-size: 0.92rem;
+}
+
+/* Action Buttons */
+.btn-clear {
+  background-color: #ffffff;
+  color: var(--brand-dark);
+  border: 1.5px solid var(--brand-dark);
+  font-weight: 600;
+}
+
+.btn-clear:hover,
+.btn-clear:focus-visible {
+  background-color: var(--brand-light);
+  color: var(--brand-dark);
+  border-color: var(--brand-dark);
+}
+
+.btn-find {
+  background-color: var(--brand-amber);
+  color: var(--brand-dark);
+  border: 1.5px solid var(--brand-amber);
+  font-weight: 700;
+}
+
+.btn-find:hover,
+.btn-find:focus-visible {
+  background-color: #e09626;
+  border-color: #e09626;
+  color: var(--brand-dark);
+}

@@ -1,0 +1,69 @@
+/* Task 3 — Rebuilt Café Table Reservation Form (HTML + Bootstrap 5.3) */
+
+body {
+  background-color: #faf7f2;
+  color: #2c221e;
+}
+
+.reservation-card {
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(44, 34, 30, 0.08);
+  overflow: hidden;
+}
+
+.reservation-header {
+  background-color: #3d2b1f;
+  color: #ffffff;
+}
+
+.form-label,
+.col-form-label {
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+  border-color: #8b5e3c;
+  box-shadow: 0 0 0 0.25rem rgba(139, 94, 60, 0.25);
+}
+
+.form-check-input:checked {
+  background-color: #6f4528;
+  border-color: #6f4528;
+}
+
+.btn-reserve {
+  background-color: #6f4528;
+  border-color: #6f4528;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.btn-reserve:hover,
+.btn-reserve:focus-visible {
+  background-color: #56341d;
+  border-color: #56341d;
+  color: #ffffff;
+}
+
+/* Show validation state after user changes a field */
+.form-control:user-invalid,
+.form-select:user-invalid,
+.form-check-input:user-invalid {
+  border-color: #dc3545;
+}
+
+.form-control:user-valid,
+.form-select:user-valid {
+  border-color: #198754;
+}
+
+input:user-invalid ~ .invalid-feedback,
+select:user-invalid ~ .invalid-feedback,
+textarea:user-invalid ~ .invalid-feedback,
+fieldset:has(input:user-invalid) .invalid-feedback {
+  display: block;
+}
